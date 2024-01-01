@@ -12,7 +12,6 @@
     <div class="section">
       <div v-if="loading" class="loader">
         <div class="spinner"></div>
-        <!-- <p>Loader</p> -->
       </div>
       <div v-else class="container">
         <div
@@ -85,8 +84,7 @@
               </div>
             </div>
           </div>
-          <div v-else style="display: none" class="header-content">
-          </div>
+          <div v-else style="display: none" class="header-content"></div>
           <p
             v-if="
               product.category === 'men\'s clothing' ||
@@ -147,6 +145,7 @@
 </template>
 
 <script>
+const totalNumberOfProducts = 20;
 export default {
   name: "ProductSection",
   data: function () {
@@ -181,6 +180,8 @@ export default {
       const nextProductId = this.product.id + 1;
       this.fetchNextProduct(nextProductId);
     },
+
+    
     fetchNextProduct(productId) {
       fetch(`https://fakestoreapi.com/products/${productId}`)
         .then((response) => {
@@ -192,6 +193,10 @@ export default {
         .then((data) => {
           this.product = data;
           this.loading = false;
+
+          if (this.product.id === totalNumberOfProducts) {
+            this.fetchProduct();
+          }
         })
         .catch((error) => {
           console.error("Error fetching product:", error);
@@ -201,4 +206,4 @@ export default {
 };
 </script>
 
-<style scoped src="../assets/styles/men_page.css"></style>
+<style scoped src="../assets/styles/ProductSection.css"></style>
