@@ -1,0 +1,261 @@
+@import "./colors.css";
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.magenta {
+    height: 700px;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.spinner {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+.background-container-men {
+  width: 100%; /* Sesuaikan lebar container dengan kebutuhan */
+  height: 500px; /* Sesuaikan tinggi container dengan kebutuhan */
+  background-image: url("../images/bg-pattern.svg"); /* Lokasi gambar di dalam folder assets */
+  background-size: cover; /* Mengatur gambar agar mengisi container */
+  background-position: center;
+  background-color: var(--color-light-aqua);
+}
+
+.background-container-women {
+    width: 100%; /* Sesuaikan lebar container dengan kebutuhan */
+    height: 500px; /* Sesuaikan tinggi container dengan kebutuhan */
+    background-image: url("../images/bg-pattern.svg"); /* Lokasi gambar di dalam folder assets */
+    background-size: cover; /* Mengatur gambar agar mengisi container */
+    background-position: center;
+    background-color: var(--color-pink);
+  }
+
+.background-container-unavailable {
+    width: 100%; /* Sesuaikan lebar container dengan kebutuhan */
+    height: 500px; /* Sesuaikan tinggi container dengan kebutuhan */
+    background-size: cover; /* Mengatur gambar agar mengisi container */
+    background-position: center;
+    background-color: var(--color-light-gray);
+  }
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 540px;
+    width: 100%;
+    margin-top: -400px;
+}
+
+.container {
+    display: flex;
+    background-color: var(--color-light-white);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+    width: 60%;
+    justify-content: center;
+    box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+    width: 90%;
+    height: 40px;
+    padding-left: 3px;
+    padding-bottom: 3px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--color-light-gray);
+}
+
+.rating {
+    display: flex;
+    gap: 5px;
+}
+
+.rating-ui {
+    display: flex;
+    margin-top: 20px;
+}
+
+.circle-men {
+    border: 1px solid var(--color-blue-navy);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-right: 2px;
+    background-color: var(--color-blue-navy);
+}
+
+.circle-women {
+    border: 1px solid var(--color-light-purple);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-right: 2px;
+    background-color: var(--color-light-purple);
+}
+
+.empty-circle {
+    border: 1px solid var(--color-light-purple);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-right: 2px;
+    background-color: var(--color-light-white);
+}
+
+
+.description-section {
+    height: 100%;
+    width: 70%;
+}
+
+.description {
+    width: 90%;
+    height: 250px;
+    font-size: 18px;
+    border-bottom: 2px solid var(--color-light-gray);
+}
+
+.title-product-men {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    height: 40px;
+    width: 90%;
+    font-size: 25px;
+    color: var(--color-blue-navy);
+}
+
+.title-product-women {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    height: 40px;
+    width: 90%;
+    font-size: 25px;
+    color: var(--color-light-purple);
+}
+
+.price-men {
+    margin-top: -10px;
+    font-size: 25px;   
+    font-weight: bold;
+    color: var(--color-blue-navy);
+}
+
+.price-women {
+    margin-top: -10px;
+    font-size: 25px;   
+    font-weight: bold;
+    color: var(--color-light-purple);
+}
+
+.button-section {
+    margin-top: -10px;
+    display: flex;
+    justify-content: left;
+    gap: 23px;
+}
+
+.button-buy-men {
+    width: 250px;
+    height: 35px;
+    background-color: var(--color-blue-navy);
+    color: var(--color-light-white);
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.button-buy-women {
+    width: 250px;
+    height: 35px;
+    background-color: var(--color-light-purple);
+    color: var(--color-light-white);
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.button-next-men {
+    width: 250px;
+    height: 35px;
+    border: 3px solid var(--color-blue-navy);
+    background-color: var(--color-light-white);
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--color-blue-navy);
+    border-radius: 3px;
+    
+}
+
+.button-next-women {
+    width: 250px;
+    height: 35px;
+    border: 3px solid var(--color-light-purple);
+    background-color: var(--color-light-white);
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--color-light-purple);
+    border-radius: 3px;
+    
+}
+
+.button-next-unavailable {
+    width: 390px;
+    height: 35px;
+    border: 3px solid var(--color-light-black);
+    background-color: var(--color-light-white);
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--color-light-black);
+    border-radius: 3px;
+    margin-bottom: 700px;
+}
+
+.image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 40%;
+}
+
+.image-sad {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.sad {
+    margin-top: 50px;
+    background-image: url("../images/sad-face.png");
+    width: 1000px;
+    height: 80%;
+}
+
+.paragraf {
+    margin-top: 150px;
+}
+
+.image{
+    height: 200px;
+    width: 200px;
+}
